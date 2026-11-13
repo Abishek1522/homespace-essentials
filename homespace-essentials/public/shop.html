@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All products | Homespace Essentials</title>
+<meta name="description" content="Browse electronics, furniture, vessels and cooking products. Filter by room and price.">
+<meta property="og:title" content="All products | Homespace Essentials">
+<meta property="og:description" content="Browse electronics, furniture, vessels and cooking products. Filter by room and price.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#dfe4db">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400..700&family=Figtree:wght@400..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/site.css">
+
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main" class="page"><div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span>/</span><span id="crumb-current" aria-current="page">All products</span></nav>
+  <div class="page__head"><h1 id="heading">All products</h1><p id="blurb"></p></div>
+  <div class="tabs" id="tabs" role="group" aria-label="Department"></div>
+  <div class="shop">
+    <form class="filters" id="filters" aria-label="Filters"><details id="fbox" open><summary>Filters</summary><div class="filters__body">
+      <fieldset><legend>Room</legend><div class="chips" id="rooms"></div></fieldset>
+      <fieldset><legend>Price (&#8377;)</legend><div class="row2"><div class="field"><label class="sr" for="min">Minimum price</label><input class="input" id="min" type="number" min="0" inputmode="numeric" placeholder="Min"></div><div class="field"><label class="sr" for="max">Maximum price</label><input class="input" id="max" type="number" min="0" inputmode="numeric" placeholder="Max"></div></div></fieldset>
+      <label class="check"><input type="checkbox" id="in_stock"> In stock only</label>
+      <button class="btn btn--ghost btn--sm" type="button" id="reset">Clear filters</button>
+    </div></details></form>
+    <div>
+      <div class="toolbar"><p id="count" class="muted" role="status"></p>
+        <div><label class="sr" for="sort">Sort by</label><select class="select" id="sort"><option value="popular">Featured first</option><option value="price_asc">Price: low to high</option><option value="price_desc">Price: high to low</option><option value="discount">Biggest discount</option></select></div></div>
+      <div class="grid" id="grid"></div>
+      <div class="more" id="more" hidden><button class="btn btn--ghost" type="button">Show more</button></div>
+    </div>
+  </div>
+</div></main>
+<div id="site-footer"></div>
+<script type="module" src="/js/shop.js"></script>
+</body>
+</html>

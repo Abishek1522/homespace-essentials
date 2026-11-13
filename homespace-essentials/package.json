@@ -1,0 +1,16 @@
+{
+  "name": "homespace-essentials",
+  "version": "1.0.0",
+  "description": "Homespace Essentials: online store for electronics, furniture, vessels and cooking products",
+  "type": "module",
+  "private": true,
+  "engines": { "node": ">=22.13" },
+  "scripts": {
+    "start": "node --disable-warning=ExperimentalWarning server/index.js",
+    "dev": "node --watch --disable-warning=ExperimentalWarning server/index.js",
+    "seed": "node --disable-warning=ExperimentalWarning server/seed.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
